@@ -285,7 +285,7 @@ def parse_resource(start):
         pref = str(int.from_bytes(
             message[(start+10+n_len):(start+12+n_len)], byteorder='big'))
         print(name + '\t' + 'MX preference = ' + pref +
-              ', mails exchanger = ' + parse_name(start+12+n_len)[0])
+              ', mails exchanger = ' + parse_name(start+10+n_len)[0])
 
     return ans_len+n_len
 
